@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СНТ "Мичуринец-3"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="{% static 'css/dist/main.css' %}">
+</head>
+<body class="font-sans">
+
+<header class="bg-green">
+     <nav class="flex justify-between items-center w-[92%] h-[64px] mx-auto">
+        <a href="https://flowbite.com" class="flex items-center">
+            <img class="w-logoSize" src="{% static 'img/Logo1.png' %}" alt="Здесь должен быть логотип" srcset="">
+        </a>
+        <div class="flex">
+            {% block navigation %} {% endblock %}
+            <div class="flex items-center gap-6">
+                <button class="bg-[#a6c1ee] ml-[3vw] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+{% block content %} {% endblock %}
+
+<footer class="bg-green shadow">
+    <div class="mx-auto py-5 px-[4vw] md:flex md:items-center md:justify-between">
+      <span class="text-sm sm:text-center font-normal">© 2023 <a href="https://flowbite.com/" class="hover:underline">Created by techSinus</a>
+    </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
+            <li>
+                <a href="#" class="mr-4 lg:hover:underline lg:hover:underline-offset-4 md:mr-6 ">Whatsapp</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 lg:hover:underline lg:hover:underline-offset-4 md:mr-6">Telegram</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 lg:hover:underline lg:hover:underline-offset-4 md:mr-6">Телефон</a>
+            </li>
+            <li>
+                <a href="#" class="lg:hover:underline lg:hover:underline-offset-4">Почта</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="{% static "scripts/Menu.js" %}"></script>
+<script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+</body>
+</html>
+
