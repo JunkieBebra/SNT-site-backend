@@ -16,7 +16,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (venv)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
@@ -29,6 +29,8 @@
       <list>
         <option value="$MODULE_DIR$/documents/templates" />
         <option value="$MODULE_DIR$/gallery/templates" />
+        <option value="$MODULE_DIR$/news/templates" />
+        <option value="$MODULE_DIR$/snt/templates" />
       </list>
     </option>
   </component>

@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def documentation_main(request):
+    return render(request, 'documents/documentation.html')
