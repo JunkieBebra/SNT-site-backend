@@ -21,8 +21,10 @@
         <div class="flex">
             {% block navigation %} {% endblock %}
             <div class="flex items-center gap-6">
-                <button class="bg-[#a6c1ee] ml-[3vw] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                <a href="{% url 'login:index' %}">
+                    <button class="bg-[#a6c1ee] ml-[3vw] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                </a>
             </div>
         </div>
     </nav>

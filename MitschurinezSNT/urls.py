@@ -24,5 +24,6 @@ urlpatterns = [
     path('about_us/', include('snt.urls', namespace='about_us')),
     path('news/', include('news.urls', namespace='news')),
     path('gallery/', include('gallery.urls', namespace='gallery')),
-    path('documents/', include('documents.urls', namespace='documents'))
+    path('documents/', include('documents.urls', namespace='documents')),
+    path('login/', include('user.urls', namespace='login'))
 ]

@@ -31,6 +31,7 @@
         <option value="$MODULE_DIR$/gallery/templates" />
         <option value="$MODULE_DIR$/news/templates" />
         <option value="$MODULE_DIR$/snt/templates" />
+        <option value="$MODULE_DIR$/user/templates" />
       </list>
     </option>
   </component>
