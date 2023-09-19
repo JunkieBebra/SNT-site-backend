@@ -1,0 +1,39 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block form %}
+    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-600 md:text-2xl">
+        Регистрация пользователя
+    </h1>
+    <form class="space-y-4 md:space-y-6" action="#">
+        <div>
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Имя</label>
+            <input type="text" name="first_name" id="first_name" class="bg-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Имя пользователя" required="">
+        </div>
+        <div>
+            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-500">Фамилия</label>
+            <input type="text" name="last_name" id="last_name" class="bg-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Фамилия пользователя" required="">
+        </div>
+        <div>
+            <label for="patronym" class="block mb-2 text-sm font-medium text-gray-500">Отчество</label>
+            <input type="text" name="patronym" id="patronym" class="bg-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Отчество пользователя" required="">
+        </div>
+        <div>
+            <label for="address" class="block mb-2 text-sm font-medium text-gray-500">Номер участка</label>
+            <input type="number" name="address" id="address" class="bg-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Номер участка пользователя" required="">
+        </div>
+        <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-500">Логин</label>
+            <input type="email" name="email" id="email" class="bg-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Логин пользователя" required="">
+        </div>
+        <div>
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-500">Пароль</label>
+            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+        </div>
+        <div>
+            <label for="password2" class="block mb-2 text-sm font-medium text-gray-500">Подтвердите пароль</label>
+            <input type="password" name="password2" id="password2" placeholder="••••••••" class="bg-gray-50  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+        </div>
+
+        <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-teal-200 hover:bg-teal-300">Войти</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СНТ "Мичуринец-3"</title>
+    <link rel="stylesheet" href="{% static 'css/dist/main.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body>
+    <header class="">
+            <a href="{% url 'index' %}" class="flex items-center justify-end">
+                <img class="h-6 w-6 mt-4 mr-4" src="{% static 'img/cross.svg' %}" alt="{% static 'img/cross.svg' %}" srcset="">
+            </a>
+    </header>
+
+    <main class="h-screen from-lime-100 to-green-100">
+    <section class="items-center ">
+        <article class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 h-screen">
+            <div class="w-full bg-gradient-to-r from-lime-100 to-green-100 rounded-lg shadow sm:max-w-md xl:p-0">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    {% block form %}
+                    {% endblock %}
+                </div>
+            </div>
+        </article>
+    </section>
+
+</main>
+
+</body>
+</html>

@@ -25,5 +25,5 @@ urlpatterns = [
     path('news/', include('news.urls', namespace='news')),
     path('gallery/', include('gallery.urls', namespace='gallery')),
     path('documents/', include('documents.urls', namespace='documents')),
-    path('login/', include('user.urls', namespace='login'))
+    path('user/', include('user.urls', namespace='login'))
 ]
