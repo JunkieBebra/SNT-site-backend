@@ -4,14 +4,15 @@
     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-600 md:text-2xl">
         Вход в личный кабинет
     </h1>
-    <form class="space-y-4 md:space-y-6" action="#">
+    <form class="space-y-4 md:space-y-6" action="{% url 'login:login' %}" method="post">
+        {% csrf_token %}
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-500">Логин</label>
-            <input type="email" name="email" id="email" class="bg-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Ваш логин" required="">
+            <label for="{{ form.email.id_for_label }}" class="block mb-2 text-sm font-medium text-gray-500">E-Mail</label>
+            {{ form.username }}
         </div>
         <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-500">Пароль</label>
-            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+            <label for="{{ form.password.id_for_label }}" class="block mb-2 text-sm font-medium text-gray-500">Пароль</label>
+            {{ form.password }}
         </div>
 
         <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-teal-200 hover:bg-teal-300">Войти</button>
