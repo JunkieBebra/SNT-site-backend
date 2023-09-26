@@ -4,21 +4,44 @@ from django.db import models
 from django.dispatch import receiver
 
 
+class Category(models.Model):
+    CATEGORY_ID_CHOICES = [
+        (1, "Учредительный документ"),
+        (2, "Общее собрание"),
+        (3, "Работа правления"),
+        (4, "Работа учредительной комиссии"),
+        (5, "Финансовая отчетность"),
+    ]
+    CATEGORY_NAME_CHOICES = [
+        ("Учредительный документ", "Учредительный документ"),
+        ("Общее собрание", "Общее собрание"),
+        ("Работа правления", "Работа правления"),
+        ("Работа учредительной комиссии", "Работа учредительной комиссии"),
+        ("Финансовая отчетность", "Финансовая отчетность"),
+    ]
+    id = models.IntegerField(choices=CATEGORY_ID_CHOICES, primary_key=True, unique=True)
+    name = models.CharField(choices=CATEGORY_NAME_CHOICES, max_length=128, unique=True)
+    description = models.TextField()
+
+    class Meta:
+        verbose_name = 'категорию'
+        verbose_name_plural = 'Категории'
+
+    def __str__(self):
+        return f'{self.name}'
+
+
 class Directory(models.Model):
     name = models.CharField(max_length=128, unique=False)
     date_add = models.DateTimeField(null=False)
-    DOCUMENT_TYPE_CHOICES = [
-        ("CD", "Учредительный документ"),
-        ("GM", "Общее собрание"),
-        ("BW", "Работа правления"),
-        ("СС", "Работа учредительной комиссии"),
-        ("FS", "Финансовая отчетность"),
-    ]
-    document_type = models.CharField(max_length=2, choices=DOCUMENT_TYPE_CHOICES, default="CD")
+    document_type = models.ForeignKey(to=Category, on_delete=models.PROTECT)
 
     class Meta:
-        verbose_name = 'директорий'
+        verbose_name = 'директорию'
         verbose_name_plural = 'Директории'
+
+    def __str__(self):
+        return f'{self.name}'
 
 
 class Document(models.Model):

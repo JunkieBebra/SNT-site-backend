@@ -3,50 +3,49 @@
 
 {% block navigation %}
     <div class="nav-links duration-500 md:static absolute bg-green md:min-h-fit min-h-[18vh] left-0 top-[-100%] md:ml-0 md:w-auto w-full flex items-center">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[3vw] md:pb-0 pb-[2rem] gap-8 ml-[4vw]">
-                    <li>
-                        <a href="{% url 'index' %}" class="font-medium text-white lg:hover:underline lg:hover:underline-offset-4">Главная</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about_us:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">О нас</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'news:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Новости</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'gallery:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Галерея</a>
-                    </li>
-                    <li>
-                        <div class="font-medium lg:hover:underline lg:hover:underline-offset-4">
-                            <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" lg:hover:underline lg:hover:underline-offset-4 font-medium text-center inline-flex items-center" type="button">Документы<svg class="w-2.5 h-2.5 ml-2.5 mt-[4px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                            </svg>
-                            </div>
-                            <!-- Dropdown menu -->
-                            <div id="dropdown" class="z-10 hidden bg-green md:bg-[#d6edd3] divide-y md:gap-[3vw] md:rounded-lg md:shadow md:w-44 w-full">
-                                <ul class="py-2 font-medium md:text-[14px] md:px-[2vw] px-[4vw]" aria-labelledby="dropdownDefaultButton">
-                                    <li>
-                                        <a href="{% url 'documents:index' %}" class="block pb-2 focus:text-white">Учредительные документы</a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'documents:index' %}" class="block py-2 focus:text-white">Общее собрание</a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'documents:index' %}" class="block py-2 focus:text-white">Работа правления</a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'documents:index' %}" class="block py-2 focus:text-white">Работа учредительной комиссии</a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'documents:index' %}" class="block py-2 focus:text-white">Финансовая отчетность</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <ul class="flex md:flex-row flex-col md:items-center md:gap-[3vw] md:pb-0 pb-[2rem] gap-8 ml-[4vw]">
+            <li>
+                <a href="{% url 'index' %}" class="font-medium text-white lg:hover:underline lg:hover:underline-offset-4">Главная</a>
+            </li>
+            <li>
+                <a href="{% url 'about_us:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">О нас</a>
+            </li>
+            <li>
+                <a href="{% url 'news:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Новости</a>
+            </li>
+            <li>
+                <a href="{% url 'gallery:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Галерея</a>
+            </li>
+            <li>
+                <div class="font-medium lg:hover:underline lg:hover:underline-offset-4">
+                    <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" lg:hover:underline lg:hover:underline-offset-4 font-medium text-center inline-flex items-center" type="button">Документы<svg class="w-2.5 h-2.5 ml-2.5 mt-[4px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                    </svg>
+                    </div>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown" class="z-10 hidden bg-green md:bg-[#d6edd3] divide-y md:gap-[3vw] md:rounded-lg md:shadow md:w-44 w-full">
+                        <ul class="py-2 font-medium md:text-[14px] md:px-[2vw] px-[4vw]" aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <a href="{% url 'documents:index' 1 %}" class="block pb-2 focus:text-white">Учредительные документы</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'documents:index' 2%}" class="block py-2 focus:text-white">Общее собрание</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'documents:index' 3 %}" class="block py-2 focus:text-white">Работа правления</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'documents:index' 4 %}" class="block py-2 focus:text-white">Работа учредительной комиссии</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'documents:index' 5 %}" class="block py-2 focus:text-white">Финансовая отчетность</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
 
 
