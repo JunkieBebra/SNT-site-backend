@@ -13,6 +13,7 @@
             <li>
                 <a href="{% url 'news:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Новости</a>
             </li>
+            {% if user.is_authenticated %}
             <li>
                 <a href="{% url 'gallery:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Галерея</a>
             </li>
@@ -44,6 +45,14 @@
                     </div>
                 </div>
             </li>
+            {% else %}
+            <li>
+                <a href="{% url 'user:login' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Галерея</a>
+            </li>
+            <li>
+                <a href="{% url 'user:login' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Документы</a>
+            </li>
+            {% endif %}
         </ul>
     </div>
 {% endblock %}

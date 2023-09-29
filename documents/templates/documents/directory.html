@@ -65,7 +65,7 @@
                 {% for document in documents %}
                     <article class="text-center">
                         <div class="h-52 w-64 hover:h-60 hover:w-72 duration-700">
-                            <a href="#" class=""><img src="{%  static 'img/document1.png' %}" alt="{%  static 'img/document1.png' %}"></a>
+                            <a href="{% url 'documents:download' document.id %}" class=""><img src="{%  static 'img/document1.png' %}" alt="{%  static 'img/document1.png' %}"></a>
                         </div>
                         <h2 class="text-[26px] mt-6 font-light">{{ document.name }}</h2>
                     </article>
