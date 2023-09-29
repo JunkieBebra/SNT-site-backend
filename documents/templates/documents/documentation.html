@@ -13,12 +13,17 @@
                     <li>
                         <a href="{% url 'news:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Новости</a>
                     </li>
+                    {% if user.is_superuser %}
+                    <li>
+                        <a href="{% url 'admin:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Админ-панель</a>
+                    </li>
+                    {% endif %}
                     <li>
                         <a href="{% url 'gallery:index' %}" class="font-medium focus:text-white lg:hover:underline lg:hover:underline-offset-4">Галерея</a>
                     </li>
                     <li>
                         <div href="#" class="font-medium lg:hover:underline lg:hover:underline-offset-4">
-                            <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" lg:hover:underline lg:hover:underline-offset-4 font-medium text-center inline-flex items-center" type="button">Документы<svg class="w-2.5 h-2.5 ml-2.5 mt-[4px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" lg:hover:underline lg:hover:underline-offset-4 font-medium text-center inline-flex items-center text-white" type="button">Документы<svg class="w-2.5 h-2.5 ml-2.5 mt-[4px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                             </svg>
                             </div>
@@ -26,19 +31,19 @@
                             <div id="dropdown" class="z-10 hidden bg-green md:bg-[#d6edd3] divide-y md:gap-[3vw] md:rounded-lg md:shadow md:w-44 w-full">
                                 <ul class="py-2 font-medium md:text-[14px] md:px-[2vw] px-[4vw]" aria-labelledby="dropdownDefaultButton">
                                     <li>
-                                        <a href="{% url 'documents:index' 1 %}" class="block pb-2 focus:text-white">Учредительные документы</a>
+                                        <a href="{% url 'documents:index' 1 %}" class="block pb-2 {% if category_id_1 %} text-white {% else %} focus:text-white {% endif %}">Учредительные документы</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'documents:index' 2 %}" class="block py-2 focus:text-white">Общее собрание</a>
+                                        <a href="{% url 'documents:index' 2 %}" class="block py-2 {% if category_id_2 %} text-white {% else %} focus:text-white {% endif %}">Общее собрание</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'documents:index' 3 %}" class="block py-2 focus:text-white">Работа правления</a>
+                                        <a href="{% url 'documents:index' 3 %}" class="block py-2 {% if category_id_3 %} text-white {% else %} focus:text-white {% endif %}">Работа правления</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'documents:index' 4 %}" class="block py-2 focus:text-white">Работа учредительной комиссии</a>
+                                        <a href="{% url 'documents:index' 4 %}" class="block py-2 {% if category_id_4 %} text-white {% else %} focus:text-white {% endif %}">Работа учредительной комиссии</a>
                                     </li>
                                     <li>
-                                        <a href="{% url 'documents:index' 5 %}" class="block py-2 focus:text-white">Финансовая отчетность</a>
+                                        <a href="{% url 'documents:index' 5 %}" class="block py-2 {% if category_id_5 %} text-white {% else %} focus:text-white {% endif %}">Финансовая отчетность</a>
                                     </li>
 
                                 </ul>

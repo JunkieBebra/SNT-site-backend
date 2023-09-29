@@ -141,7 +141,7 @@ class User(AbstractUser):
         (134, "134"),
         (135, "135"),
     ]
-    address = models.IntegerField(choices=ADDRESS_CHOICE, verbose_name="Номер участка", default=1)
+    address = models.IntegerField(choices=ADDRESS_CHOICE, verbose_name="Номер участка", default=1, null=True)
 
     def __str__(self):
         return '%s %s %s' % (self.last_name, self.first_name, self.patronym)

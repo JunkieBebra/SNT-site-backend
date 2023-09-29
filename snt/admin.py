@@ -1,3 +1,5 @@
 from django.contrib import admin
+from snt.models import ProminentOnes, ImportantMessage
 
-# Register your models here.
+admin.site.register(ProminentOnes)
+admin.site.register(ImportantMessage)
