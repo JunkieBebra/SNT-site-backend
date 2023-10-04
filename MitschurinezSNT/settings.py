@@ -79,10 +79,16 @@ WSGI_APPLICATION = 'MitschurinezSNT.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# PostgreSQL
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mitschurinetz3_snt',
+        'USER': 'snt_admin',
+        'PASSWORD': 'yGRTjs9MnAxBWSksYE4646',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
